@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agente SGI · Indicadores y mejora</title><link rel="stylesheet" href="css/style.css"></head><body>
+<header><h1>Agente SGI</h1><p>Análisis de indicadores con ISO 17011, 9001, 27001 y 30401</p></header>
+<main>
+<section><h2>1. Configuración</h2>
+<label>API key de Gemini <input id="key" type="password" placeholder="Se guarda solo en tu navegador"></label>
+<label>Informe de indicadores (.xlsx) <input id="file" type="file" accept=".xlsx"></label>
+<p id="st" role="status">Carga el informe para empezar.</p></section>
+<section><h2>2. Cumplimiento por proceso</h2><canvas id="ch" height="110"></canvas>
+<button id="go" disabled>Analizar con Gemini</button></section>
+<section id="out" hidden><h2>3. Resultado</h2><div id="res"></div>
+<div class="row"><button id="bx">Excel</button><button id="bw">Informe Word</button><button id="bp">PowerPoint</button></div></section>
+<section><h2>Pregunta al agente</h2><div id="log"></div><textarea id="q" rows="2" placeholder="Ej.: ¿Qué procesos tienen riesgo de repetir el incumplimiento?"></textarea><button id="ask" disabled>Enviar</button></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docx@7.8.2/build/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pptxgenjs/3.12.0/pptxgen.bundle.js"></script>
+<script src="js/app.js"></script></body></html>
